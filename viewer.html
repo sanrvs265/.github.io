@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf‑8"/>
+    <title>PDF.js GitHub Pages Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf_viewer.css" />
+  </head>
+  <body>
+    <div id="viewerContainer" style="height:100vh"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf_viewer.min.js"></script>
+    <script>
+      const CMAP_URL = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/cmaps/';
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf.worker.min.js';
+
+      const eventBus = new pdfjsViewer.EventBus();
+      const pdfViewer = new pdfjsViewer.PDFViewer({
+          container: document.getElementById('viewerContainer'),
+          eventBus
+      });
+
+      (async () => {
+          let loadingTask = pdfjsLib.getDocument({
+            url: 'docs/myfile.pdf',
+            cMapUrl: CMAP_URL,
+            cMapPacked: true
+          });
+          let pdf = await loadingTask.promise;
+          pdfViewer.setDocument(pdf);
+      })();
+    </script>
+  </body>
+</html>
