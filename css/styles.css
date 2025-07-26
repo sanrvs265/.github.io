@@ -1,22 +1,10 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, sans-serif; color: #333; line-height: 1.5; }
-header { background: #444; color: #fff; padding: 1em 2em; display: flex; justify-content: space-between; align-items: center; }
-nav a { color: #fff; margin-left: 1em; text-decoration: none; }
-.hero { text-align: center; padding: 2em; background: #f4f4f4; }
-.hero img { max-width: 100%; height: auto; margin-top: 1em; }
-.products { display: grid; gap: 1em; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); padding: 2em; }
-.product { border: 1px solid #ddd; padding: 1em; text-align: center; position: relative; }
-.product img { max-width: 100%; height: auto; }
-.product button { background: #28a745; color: #fff; border: none; padding: 0.7em 1em; cursor: pointer; margin-top: 0.5em; }
-.cart { position: fixed; top: 1em; right: 1em; background: #ff6600; color: #fff; padding: 0.5em 1em; border-radius: 5px; z-index: 1000; }
-.about, .contact { padding: 2em; background: #fafafa; }
-.contact form { max-width: 400px; margin-bottom: 1em; }
-.contact label { display: block; margin-bottom: 0.5em; }
-.contact input, .contact textarea { width: 100%; padding: 0.5em; margin-top: 0.3em; }
-.contact button { padding: 0.7em 1.2em; background: #007bff; color: #fff; border: none; cursor: pointer; }
-footer { text-align: center; padding: 1em; font-size: 0.9em; background: #444; color: #fff; }
-@media(max-width:600px) {
-  header { flex-direction: column; text-align: center; }
-  nav a { margin: 0.5em 0; display: block; }
-}
-
+/* Simplified for brevity */
+body{font-family:Arial,sans-serif;margin:0;padding:0;color:#333;}
+header{background:#444;color:#fff;padding:1em;display:flex;justify-content:space-between;}
+.nav a{color:#fff;margin-left:1em;text-decoration:none;}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1em;padding:2em;}
+.product{border:1px solid #ddd;padding:1em;text-align:center;cursor:pointer;}
+#cart-display{position:fixed;top:1em;right:1em;background:#ff6600;color:#fff;padding:.5em;}
+.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+.modal-content{background:#fff;margin:10% auto;padding:2em;max-width:400px;position:relative;}
+.modal-content .close{position:absolute;top:10px;right:10px;cursor:pointer;}
