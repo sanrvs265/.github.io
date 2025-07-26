@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Product Showcase</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>My Brand Name</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Featured Product</h2>
+    <p>Welcome to our store! Browse our latest offerings below.</p>
+    <img src="images/featured.jpg" alt="Featured Product">
+  </section>
+
+  <div class="cart" id="cart">Cart: 0</div>
+
+  <section id="products" class="products">
+    <div class="product" data-name="Product A" data-price="2500">
+      <img src="images/product-a.jpg" alt="Product A">
+      <h3>Product A</h3>
+      <p>Awesome product description for Product A.</p>
+      <strong>₹2,500</strong>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product" data-name="Product B" data-price="3799">
+      <img src="images/product-b.jpg" alt="Product B">
+      <h3>Product B</h3>
+      <p>Short description of Product B.</p>
+      <strong>₹3,799</strong>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Add more products here -->
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Include your mission, history, or brand story here.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label>Name:<input type="text" required></label>
+      <label>Email:<input type="email" required></label>
+      <label>Message:<textarea rows="4" required></textarea></label>
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: you@example.com<br>Phone: +91‑12345‑67890<br>Address: Chennai, Tamil Nadu</p>
+  </section>
+
+  <footer>
+    &copy; 2025 My Brand Name. All rights reserved.
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
 
